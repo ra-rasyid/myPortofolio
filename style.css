@@ -1,0 +1,476 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+/* untuk agar transisi scroll jadi smoth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* bagian navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid #0aebff;
+  position: fixed; /* biar posisi nav tetap */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; 
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  font-style: italic;
+}
+.navbar .navbar-logo span{
+  color: #08ffd6;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover{
+  color: #08ffd6;
+}
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #515754;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav a:hover::after{
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: #08ffd6;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html{
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html{
+    font-size: 62.5%;
+  }
+  #hamburger-menu{
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }  
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a{
+    color: black;
+    display: block; /* biar kebawah */
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+/* mobile */
+@media (max-width: 450px) {
+  html{
+    font-size: 55%;
+  }
+}
+
+/* bagian satu */
+.satu {
+  text-align: center;
+  background: linear-gradient(to bottom, #0B666A, #ffffff);
+  padding: 250px;
+}
+
+/* bagian dua */
+.dua {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px;
+  background-color: #ffffff;
+}
+.dua img {
+  margin-right: 10px;
+}
+.dua div {
+  text-align: center;
+}
+.dua h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.dua p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+}
+.dua ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.dua li {
+  margin-bottom: 10px;
+}
+.dua li:before {
+  content: "\2022";
+  color: #35A29F;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  .dua {
+    padding: 150px;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  .dua {
+    padding: 100px;
+    flex-direction: column;
+  }
+  .dua img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .dua {
+    padding: 50px;
+    flex-direction: column;
+  }
+  .dua img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* bagian ketiga */
+.tiga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to top, #ffffff, #35A29F);
+}
+.aside-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.aside_1 {
+  padding: 25px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+table {
+  margin: 0 auto;
+}
+table td {
+  padding: 10px;
+  text-align: center;
+}
+table img {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+}
+table p {
+  margin-top: 10px;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  .aside-container {
+    justify-content: space-around;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  .aside-container {
+    flex-wrap: wrap;
+  }
+  .aside_1 {
+    width: 45%;
+    margin: 10px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .aside-container {
+    flex-direction: column;
+  }
+  .aside_1 {
+    width: 100%;
+  }
+}
+
+h2 {
+  font-family: 'Font Lucu', cursive;
+  font-size: 48px;
+  color: #515754;
+}
+
+/* bagian keempat */
+.empat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empat img {
+  margin-right: 10px;
+}
+.empat h2,
+.empat p {
+  display: block;
+  text-align: center;
+}
+.article_1,
+.article_2,
+.article_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  .article_1,
+  .article_2,
+  .article_3 {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  .article_1,
+  .article_2,
+  .article_3 {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .article_1,
+  .article_2,
+  .article_3 {
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+/* bagian kelima */
+.lima{
+  display: flex;
+  background-color: #0043fa;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.lima p {
+align-items: center;
+display: flex;
+margin: 0 10px;
+color: #fff;
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (min-width: 768px) {
+  .lima {
+    flex-direction: column;
+  } 
+  .lima p {
+    margin: 10px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .lima {
+    flex-wrap: wrap;
+  }  
+  .lima p {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* bagian komen */
+.komentar {
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-input {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+form {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+textarea {
+  height: 100px;
+}
+button {
+  padding: 8px 15px;
+  background-color: #1100ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
+}
+.komentar {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+.komentar h3 {
+  margin-top: 0;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 600px;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 400px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+/* bagian footer */
+body::before {
+  content: "";
+  flex: 1;
+}
+footer {
+  background-color: #35A29F;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  align-self: stretch;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 20px;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  footer {
+    padding: 15px;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  footer {
+    padding: 10px;
+  }
+}
+
+
+/* tulisan jadi kebawah */
+@media screen and (max-width: 767px) {
+  .satu p,
+  .dua p,
+  .tiga p,
+  .empat p {
+    word-wrap: break-word;
+  }
+}
+
+/* menyusaikan ukuran sisi kiri */
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .aside-container {
+    white-space: normal;
+    overflow-x: auto;
+  }
+}
