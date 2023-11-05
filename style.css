@@ -167,6 +167,11 @@ html {
   width: 1em;
   margin-left: -1em;
 }
+.rounded-image {
+  /* border: 2px solid #000; Mengatur ketebalan dan warna border */
+  border-radius: 50%; /* Mengatur gambar menjadi lingkaran */
+  margin: 10px; /* Untuk memberikan jarak antar gambar */
+}
 /* Tampilan untuk laptop */
 @media screen and (min-width: 1024px) {
   .dua {
