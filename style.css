@@ -326,7 +326,8 @@ h2 {
 /* bagian kelima */
 .lima{
   display: flex;
-  background-color: #0043fa;
+  background: linear-gradient(to right, #555, #0B666A);
+  padding: 10px;;
   justify-content: center;
   flex-direction: row;
   align-items: center;
@@ -361,7 +362,6 @@ color: #fff;
 
 /* bagian komen */
 .komentar {
-  width: 500px;
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -399,7 +399,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background-color: #555;
+  background-color: red;
 }
 .komentar {
   margin-bottom: 20px;
@@ -436,7 +436,7 @@ body::before {
   flex: 1;
 }
 footer {
-  background-color: #35A29F;
+  background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   text-align: center;
   align-self: stretch;
