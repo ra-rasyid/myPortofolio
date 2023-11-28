@@ -124,36 +124,52 @@ html {
 /* bagian satu */
 .satu {
   text-align: center;
-  background: linear-gradient(to bottom, #0B666A, #ffffff);
-  padding: 250px;
+  background: linear-gradient(to bottom, #566d6c, #ffffff); 
 }
+.satu h2 {
+  margin-bottom: 20px;
+}
+/* Tampilan untuk laptop */
+@media screen and (min-width: 1024px) {
+  .satu {
+    padding: 20rem 7% 10rem;
+  }
+}
+/* Tampilan untuk tablet dan web */
+@media screen and (max-width: 1023px) {
+  .satu {
+    padding: 100px;
+    flex-direction: column;
+  }
+}
+/* Tampilan untuk mobile */
+@media screen and (max-width: 767px) {
+  .satu {
+    padding: 50px;
+    flex-direction: column;
+  }
+}
+
 
 /* bagian dua */
 .dua {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px;
   background-color: #ffffff;
-}
-.dua img {
-  margin-right: 10px;
-}
-.dua div {
   text-align: center;
 }
 .dua h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
-.dua p {
+.dua , .tiga , .empat p {
   font-size: 16px;
   color: #666666;
   line-height: 1.5;
 }
 .dua ul {
   list-style: none;
-  padding: 0;
   margin-top: 20px;
 }
 .dua li {
@@ -170,12 +186,12 @@ html {
 .rounded-image {
   /* border: 2px solid #000; Mengatur ketebalan dan warna border */
   border-radius: 50%; /* Mengatur gambar menjadi lingkaran */
-  margin: 10px; /* Untuk memberikan jarak antar gambar */
 }
+
 /* Tampilan untuk laptop */
 @media screen and (min-width: 1024px) {
   .dua {
-    padding: 150px;
+    padding: 5rem 7% 10rem;
   }
 }
 /* Tampilan untuk tablet dan web */
@@ -201,13 +217,15 @@ html {
   }
 }
 
+
 /* bagian ketiga */
 .tiga {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to top, #ffffff, #35A29F);
+  padding: 10rem 7% 1.4rem;
+  background: linear-gradient(to top, #ffffff, #566d6c);
 }
 .aside-container {
   display: flex;
@@ -253,10 +271,13 @@ table p {
 /* Tampilan untuk mobile */
 @media screen and (max-width: 767px) {
   .aside-container {
+    padding: 50px;
     flex-direction: column;
   }
   .aside_1 {
     width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -272,6 +293,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10rem 0 1.4rem;
 }
 .empat img {
   margin-right: 10px;
@@ -288,10 +310,9 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  padding: 20px;
   margin-top: 10px;
-  margin-right: 100px;
-  margin-left: 100px;
+  /* margin-right: 100px;
+  margin-left: 100px; */
   margin-bottom: 10px;
 }
 /* Tampilan untuk laptop */
