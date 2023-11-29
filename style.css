@@ -138,7 +138,7 @@ html {
 /* Tampilan untuk tablet dan web */
 @media screen and (max-width: 1023px) {
   .satu {
-    padding: 101px;
+    padding: 100px;
     flex-direction: column;
   }
 }
