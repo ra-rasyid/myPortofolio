@@ -29,7 +29,6 @@ html {
   right: 0;
   z-index: 9999; 
 }
-
 .navbar .navbar-logo {
   font-size: 2rem;
   font-weight: 700;
@@ -39,7 +38,6 @@ html {
 .navbar .navbar-logo span{
   color: #08ffd6;
 }
-
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
@@ -117,7 +115,35 @@ html {
 /* mobile */
 @media (max-width: 450px) {
   html{
-    font-size: 55%;
+    font-size: 50%;
+  }
+#hamburger-menu{
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }  
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a{
+    color: black;
+    display: block; /* biar kebawah */
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
   }
 }
 
@@ -138,15 +164,19 @@ html {
 /* Tampilan untuk tablet dan web */
 @media screen and (max-width: 1023px) {
   .satu {
-    padding: 100px;
+    padding: 17rem 7% 10rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* Tampilan untuk mobile */
 @media screen and (max-width: 767px) {
   .satu {
-    padding: 50px;
+    padding: 15rem 7% 10rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -163,10 +193,12 @@ html {
   font-size: 28px;
   margin-bottom: 20px;
 }
-.dua , .tiga , .empat p {
+.dua , .tiga , .empat , .lima p {
   font-size: 16px;
   color: #666666;
   line-height: 1.5;
+  align-items: center;
+  justify-content: center;
 }
 .dua ul {
   list-style: none;
@@ -192,13 +224,17 @@ html {
 @media screen and (min-width: 1024px) {
   .dua {
     padding: 5rem 7% 10rem;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* Tampilan untuk tablet dan web */
 @media screen and (max-width: 1023px) {
   .dua {
-    padding: 100px;
+    padding: 10rem 7% 10rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .dua img {
     margin-right: 0;
@@ -208,8 +244,10 @@ html {
 /* Tampilan untuk mobile */
 @media screen and (max-width: 767px) {
   .dua {
-    padding: 50px;
+    padding: 8rem 7% 10rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .dua img {
     margin-right: 0;
@@ -256,12 +294,16 @@ table p {
 @media screen and (min-width: 1024px) {
   .aside-container {
     justify-content: space-around;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* Tampilan untuk tablet dan web */
 @media screen and (max-width: 1023px) {
   .aside-container {
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .aside_1 {
     width: 45%;
@@ -273,6 +315,8 @@ table p {
   .aside-container {
     padding: 50px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .aside_1 {
     width: 100%;
@@ -294,6 +338,7 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 10rem 0 1.4rem;
+  text-align: center;
 }
 .empat img {
   margin-right: 10px;
@@ -322,6 +367,8 @@ h2 {
   .article_3 {
     margin-right: 200px;
     margin-left: 200px;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* Tampilan untuk tablet dan web */
@@ -331,6 +378,8 @@ h2 {
   .article_3 {
     margin-right: 30px;
     margin-left: 30px;
+    align-items: center;
+    justify-content: center;
   }
 }
 /* Tampilan untuk mobile */
@@ -339,8 +388,12 @@ h2 {
   .article_2,
   .article_3 {
     flex-direction: column;
-    margin-right: 20px;
-    margin-left: 20px;
+    padding: 50px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -365,6 +418,8 @@ color: #fff;
 @media screen and (min-width: 768px) {
   .lima {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   } 
   .lima p {
     margin: 10px;
@@ -373,11 +428,14 @@ color: #fff;
 /* Tampilan untuk mobile */
 @media screen and (max-width: 767px) {
   .lima {
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 8rem 7% 10rem;
+    align-items: center;
+    justify-content: center;
   }  
   .lima p {
-    width: 100%;
     margin: 10px 0;
+    justify-content: center;
   }
 }
 
